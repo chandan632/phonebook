@@ -3,7 +3,7 @@ import { Card, Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const Users = ({ editHandlerCall, dataField }) => {
+const Users = ({ editHandlerCall }) => {
     let [contacts, setContacts] = useState([])
     useEffect(() => {
         fetch("http://127.0.0.1:3001/contacts", {
@@ -14,7 +14,6 @@ const Users = ({ editHandlerCall, dataField }) => {
             .then(res => {
                 if (res.contacts) {
                     setContacts(res.contacts)
-                    dataField(contacts)
                 }
             })
             .catch(err => { console.log(err) })

@@ -25,9 +25,7 @@ const App = () => {
     setShowEditForm(!showEditForm)
     setEditContactId(id)
   }
-  const dataField = (data) => {
-    console.log("from app js file" + data)
-  }
+
   return (
     <div className="App">
       <div className="box">
@@ -38,7 +36,7 @@ const App = () => {
 
               buttonClicked === false ? <>
                 <Search />
-                <Users editHandlerCall={editHandlerCall} dataField={dataField} />
+                <Users editHandlerCall={editHandlerCall} />
                 <FontAwesomeIcon icon={faPlusCircle} onClick={buttonClick} title="add contact" style={{ cursor: 'pointer' }} /> </> : <AddContact backClicked={backClicked} />
 
           }
