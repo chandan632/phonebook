@@ -8,7 +8,7 @@ const Contacts = require("./model")
 const app = express()
 
 // PORT
-const port = process.env.PORT | 3001
+const port = process.env.PORT || 3001
 
 dotenv.config()
 
