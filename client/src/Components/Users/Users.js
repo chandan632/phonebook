@@ -6,7 +6,7 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 const Users = ({ editHandlerCall }) => {
     let [contacts, setContacts] = useState([])
     useEffect(() => {
-        fetch("http://127.0.0.1:3001/contacts", {
+        fetch("https://prasantaphonebookwebapp.herokuapp.com/contacts", {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         })
@@ -25,7 +25,7 @@ const Users = ({ editHandlerCall }) => {
         } else {
             id = e.target.id
         }
-        fetch(`http://127.0.0.1:3001/deletecontact?id=${id}`, {
+        fetch(`https://prasantaphonebookwebapp.herokuapp.com/deletecontact?id=${id}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         })

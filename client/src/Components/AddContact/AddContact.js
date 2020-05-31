@@ -17,7 +17,7 @@ const AddContact = ({ backClicked }) => {
         if (name === '' || number === '' || mail === '') {
             return;
         } else {
-            fetch("http://127.0.0.1:3001/addcontact", {
+            fetch("https://prasantaphonebookwebapp.herokuapp.com/addcontact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

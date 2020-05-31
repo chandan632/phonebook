@@ -9,7 +9,7 @@ function EditContact({ editContactId, backEditClicked }) {
     let [mail, setMail] = useState("")
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:3001/editcontactdata?id=${editContactId}`, {
+        fetch(`https://prasantaphonebookwebapp.herokuapp.com/editcontactdata?id=${editContactId}`, {
             method: "GET",
             headers: { 'Content-Type': 'application/json' }
         })
@@ -32,7 +32,7 @@ function EditContact({ editContactId, backEditClicked }) {
         if (name === '' || number === '' || mail === '') {
             return;
         } else {
-            fetch(`http://127.0.0.1:3001/editcontact?id=${editContactId}`, {
+            fetch(`https://prasantaphonebookwebapp.herokuapp.com/editcontact?id=${editContactId}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

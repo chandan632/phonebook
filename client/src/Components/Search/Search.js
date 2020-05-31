@@ -7,7 +7,7 @@ const Search = () => {
     const [searchContact, setSearchContact] = useState("")
     let [data, setData] = useState([])
     useEffect(() => {
-        fetch("http://127.0.0.1:3001/contact", {
+        fetch("https://prasantaphonebookwebapp.herokuapp.com/contact", {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         })
